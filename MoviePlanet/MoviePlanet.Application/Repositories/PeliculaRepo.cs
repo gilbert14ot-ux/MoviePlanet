@@ -23,5 +23,10 @@ namespace MoviePlanet.Application.Repositories
         {
             return _peliculas;
         }
+
+        public Pelicula? GetById(int id)
+        {
+            return _peliculas.FirstOrDefault(pelicula => pelicula.Id == id);
+        }
     }
 }
