@@ -52,5 +52,31 @@ namespace MoviePlanet.API.Controllers
 
             return Ok(pelicula);
         }
+
+        [HttpPut]
+        public IActionResult ActualizarPeliculas(int id, Pelicula pelicula)
+        {
+            if (id != pelicula.Id)
+            {
+                return BadRequest(new { message = "El ID ingresado no coincide con el ID de la pelicula" });
+            }
+
+            try
+            {
+                var actualizarPelicula = _peliService.ActualizarPelicula(pelicula);
+
+                if (actualizarPelicula == null)
+                {
+                    return NotFound(new { message = "Pelicula no encontrada." });
+                }
+
+                return Ok(actualizarPelicula);
+            }
+
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
     }
 }

@@ -34,5 +34,15 @@ namespace MoviePlanet.Application.Services
         {
             return peliRepo.GetById(id);
         }
+
+        public Pelicula? ActualizarPelicula(Pelicula pelicula)
+        {
+            if (string.IsNullOrWhiteSpace(pelicula.Titulo))
+            {
+                throw new ArgumentException("El titulo es obligatorio para registrar la pelicula");
+            }
+
+            return peliRepo.Actualizar(pelicula);
+        }
     }
 }

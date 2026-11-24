@@ -10,5 +10,6 @@ namespace MoviePlanet.Application.Interfaces
         Pelicula Crear(Pelicula pelicula);
         List<Pelicula> Mostrar();
         Pelicula? GetById(int id);
+        Pelicula? Actualizar(Pelicula pelicula);
     }
 }
