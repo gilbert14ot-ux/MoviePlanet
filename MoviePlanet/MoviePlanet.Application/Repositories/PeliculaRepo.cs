@@ -18,5 +18,10 @@ namespace MoviePlanet.Application.Repositories
 
             return pelicula;
         }
+
+        public List<Pelicula> Mostrar()
+        {
+            return _peliculas;
+        }
     }
 }

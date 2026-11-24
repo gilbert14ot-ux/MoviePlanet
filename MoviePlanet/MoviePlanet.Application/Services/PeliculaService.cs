@@ -24,5 +24,10 @@ namespace MoviePlanet.Application.Services
 
             return peliRepo.Crear(pelicula);
         }
+
+        public List<Pelicula> MostrarPeliculas()
+        {
+            return peliRepo.Mostrar();
+        }
     }
 }
