@@ -29,5 +29,10 @@ namespace MoviePlanet.Application.Services
         {
             return peliRepo.Mostrar();
         }
+
+        public Pelicula? GetPeliculaById(int id)
+        {
+            return peliRepo.GetById(id);
+        }
     }
 }

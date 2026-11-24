@@ -39,5 +39,18 @@ namespace MoviePlanet.API.Controllers
 
             return Ok(peliculas);
         }
+
+        [HttpGet("{id}")]
+        public IActionResult GetPeliculasById(int id)
+        {
+            var pelicula = _peliService.GetPeliculaById(id);
+
+            if(pelicula == null)
+            {
+                return NotFound(new { message = "Pelicula no encontrada" });
+            }
+
+            return Ok(pelicula);
+        }
     }
 }
