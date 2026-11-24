@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="MoviePlanet.API/MoviePlanet.API.csproj" />
+  <Project Path="MoviePlanet.Application/MoviePlanet.Application.csproj" />
+  <Project Path="MoviePlanet.Domain/MoviePlanet.Domain.csproj" />
+</Solution>
