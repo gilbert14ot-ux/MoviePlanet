@@ -31,5 +31,13 @@ namespace MoviePlanet.API.Controllers
                 return BadRequest(new { mensaje = ex.Message });
             }
         }
+
+        [HttpGet]
+        public IActionResult MostrarPeliculas()
+        {
+            var peliculas = _peliService.MostrarPeliculas();
+
+            return Ok(peliculas);
+        }
     }
 }

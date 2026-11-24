@@ -8,5 +8,6 @@ namespace MoviePlanet.Application.Interfaces
     public interface IPeliculaRepository
     {
         Pelicula Crear(Pelicula pelicula);
+        List<Pelicula> Mostrar();
     }
 }
