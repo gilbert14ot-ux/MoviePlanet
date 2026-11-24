@@ -1,0 +1,12 @@
+﻿using MoviePlanet.Domain.Entities;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace MoviePlanet.Application.Interfaces
+{
+    public interface IPeliculaRepository
+    {
+        Pelicula Crear(Pelicula pelicula);
+    }
+}
