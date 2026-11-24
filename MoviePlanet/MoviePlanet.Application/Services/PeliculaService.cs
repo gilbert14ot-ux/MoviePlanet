@@ -44,5 +44,10 @@ namespace MoviePlanet.Application.Services
 
             return peliRepo.Actualizar(pelicula);
         }
+
+        public bool EliminarPelicula(int id)
+        {
+            return peliRepo.Eliminar(id);
+        }
     }
 }

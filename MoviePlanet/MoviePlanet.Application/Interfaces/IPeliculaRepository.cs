@@ -11,5 +11,6 @@ namespace MoviePlanet.Application.Interfaces
         List<Pelicula> Mostrar();
         Pelicula? GetById(int id);
         Pelicula? Actualizar(Pelicula pelicula);
+        bool Eliminar(int id);
     }
 }
