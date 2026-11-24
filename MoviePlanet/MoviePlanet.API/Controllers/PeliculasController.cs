@@ -78,5 +78,18 @@ namespace MoviePlanet.API.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult EliminarPelicula(int id)
+        {
+            var eliminar = _peliService.EliminarPelicula(id);
+
+            if (!eliminar)
+            {
+                return NotFound(new { message = "Pelicula no encontrada" });
+            }
+
+            return NoContent();
+        }
     }
 }

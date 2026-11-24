@@ -47,5 +47,19 @@ namespace MoviePlanet.Application.Repositories
 
             return existeLaPeli;
         }
+
+        public bool Eliminar(int id)
+        {
+            var pelicula = _peliculas.FirstOrDefault(p => p.Id == id);
+
+            if (pelicula == null)
+            {
+                return false;
+            }
+
+            _peliculas.Remove(pelicula);
+
+            return true;
+        }
     }
 }
